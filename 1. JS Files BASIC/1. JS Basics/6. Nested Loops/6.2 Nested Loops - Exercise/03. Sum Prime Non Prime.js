@@ -1,0 +1,6 @@
+function sumPrimeNonPrime (input){
+
+
+
+}
+sumPrimeNonPrime
