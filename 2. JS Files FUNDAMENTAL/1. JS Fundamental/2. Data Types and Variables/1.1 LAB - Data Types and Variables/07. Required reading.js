@@ -1,6 +1,9 @@
-function test(){
+function requiredReading(pages, pagesPerOneHour, days) {
 
-    let a = b;
+    let totalTimeReading = pages/ pagesPerOneHour;
+    let requiredHours = totalTimeReading/days
+
+    console.log(requiredHours);
 
 }
-test();
+requiredReading(212, 20 ,2);
