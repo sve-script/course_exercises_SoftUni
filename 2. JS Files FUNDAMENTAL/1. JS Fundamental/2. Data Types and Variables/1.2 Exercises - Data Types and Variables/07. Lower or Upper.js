@@ -1,14 +1,8 @@
 function lowerToUpper (symbol){
 
-    let lower = true;
+    let lower = symbol === symbol.toLowerCase ? "lower-case" : "upper-case";
 
-    if(symbol == symbol.toLowerCase()){
-
-    }else {
-        lower = false;
-    }
-
-    console.log(lower === true ? "lower-case": "upper-case");
+    console.log(lower);
 
 }
 lowerToUpper("L")
