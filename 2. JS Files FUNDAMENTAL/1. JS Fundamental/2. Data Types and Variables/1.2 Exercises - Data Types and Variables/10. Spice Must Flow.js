@@ -22,4 +22,4 @@ function spiceMustFlow (startingYield){
     console.log(days);
     console.log(totalSpice);
 }
-spiceMustFlow(90)
+spiceMustFlow(155)
