@@ -1,21 +1,23 @@
 function condenseArrayToNumbers(arr) {
 
-    let numAsString = "";
-    let sum = 0;
+    if (arr.length > 1) {
 
-    for (let i = 0; i < arr.length - 1; i++) {
+        let newArr = [];
 
-        numAsString += arr[i] + arr[i + 1];
+        for (i = 0; i < arr.length - 1; i++) {
 
+            newArr[i] = arr[i] + arr[i + 1];
+            arr[i] = newArr[i];
+        }
+        console.log(arr);
+    } else {
+        console.log(arr);
     }
-
-    for(let j = 0; j < numAsString.length- 1; j++){
-        
-        sum += Number(numAsString[j]) + Number(numAsString[j+1])
-    }
-    
-    console.log(numAsString);
-    console.log(sum);
 }
 
-condenseArrayToNumbers([5,0,4,1,2])
+condenseArrayToNumbers([5, 0, 4, 1, 2]);
+
+
+// trqbwa da smetnem 0+1; 1+2;2+3 i t.n;
+// da zapazim novite stojnosti v nov masiv i da smetnem i nego;
+// novite promenlivi trqbva da gi zapazim v pyrviq masiv.. i t.n;
