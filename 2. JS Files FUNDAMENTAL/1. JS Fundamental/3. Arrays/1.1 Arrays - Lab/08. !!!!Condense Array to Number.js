@@ -3,15 +3,16 @@ function condenseArrayToNumbers(arr) {
     if (arr.length > 1) {
 
         let newArr = [];
+        let comArr = [];
 
         for (i = 0; i < arr.length - 1; i++) {
 
             newArr[i] = arr[i] + arr[i + 1];
-            arr[i] = newArr[i];
+            comArr[i] = newArr[i];
         }
-        console.log(arr);
+        console.log(comArr);
     } else {
-        console.log(arr);
+        console.log(comArr);
     }
 }
 
