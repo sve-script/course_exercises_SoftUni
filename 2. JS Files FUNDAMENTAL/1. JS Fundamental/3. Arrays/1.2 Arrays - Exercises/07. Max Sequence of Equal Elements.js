@@ -10,7 +10,7 @@ function maxSequenceOfEqualElements(arr) {
             if (currentArr.length == 0) {
                 currentArr.push(arr[i], arr[i + 1])
             } else {
-                currentArr.push(arr[i])
+                currentArr.push(arr[i+1])
             }
 
         } else {
