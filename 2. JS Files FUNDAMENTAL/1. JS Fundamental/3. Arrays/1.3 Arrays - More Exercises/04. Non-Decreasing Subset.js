@@ -9,7 +9,7 @@ function nonDecreasingSubset(arr) {
             biggestNumb = arr[i];
             printValue.push(numb)
         } else {
-            if (biggestNumb < arr[i]) {
+            if (biggestNumb <= arr[i]) {
                 biggestNumb = arr[i]
                 printValue.push(arr[i]);
             }
