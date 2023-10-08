@@ -1,4 +1,4 @@
-function TseamAcc(arr) {
+function tseamAcc(arr) {
 
     let newArr = arr.toString();
     let word = "";
@@ -92,7 +92,7 @@ function TseamAcc(arr) {
     console.log(games.join(` `))
 
 }
-TseamAcc(['CS WoW Diablo',
+tseamAcc(['CS WoW Diablo',
     `Install CS`,
     `Install WoW`,
     'Install LoL',
@@ -107,8 +107,8 @@ TseamAcc(['CS WoW Diablo',
     'Play!']
 )
 
-// solution 2 by divxp
-function TseamAcc(arr) {
+// solution 2 by divxp help
+function steamAcc(arr) {
 
     let games = arr.shift().split(` `)
     // premahvame pyrviq index ot arr (conver to String) i sys .split(` `), razdelqme string rezultata sys space, i otnovo go prevryshta v masiv, 
@@ -165,3 +165,16 @@ function TseamAcc(arr) {
     console.log(games.join(` `))
 
 }
+steamAcc(['CS WoW Diablo',
+    `Install CS`,
+    `Install WoW`,
+    'Install LoL',
+    'Uninstall WoW',
+    'Update Diablo',
+    'Expansion GTA-6',
+    `Install Minecraft`,
+    `Install Overwatch`,
+    `Uninstall GTA-6`,
+    `Update Warcraft`,
+    `Expansion Diablo-Immortal`,
+    'Play!'])

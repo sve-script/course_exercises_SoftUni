@@ -1,12 +1,12 @@
-// function repeatString(string, repeatingNumber) {
+function repeatString(string, repeatingNumber) {
 
-//     let result = string.repeat(repeatingNumber)
-//     console.log(result);
-// }
+    let result = string.repeat(repeatingNumber)
+    console.log(result);
+}
 
-// repeatString("abc", 3)
+repeatString("abc", 3)
 
-
+//solution 2---------------------------------
 function repeatStr(str, repeat) {
 
     function cycle(string, rep) {
