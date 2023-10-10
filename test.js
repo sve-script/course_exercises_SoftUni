@@ -1,9 +1,8 @@
-function solve() {
+function solve(n) {
 
-    let world = "Hello world"
+    let dataType = typeof Number(1)
 
-    console.log(world.indexOf(`world`));
-
+    console.log(dataType);
 }
 
-solve()
+solve(1)
