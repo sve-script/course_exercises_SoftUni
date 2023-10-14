@@ -2,12 +2,17 @@ function lastKNumbersSequence(n, k) {
 
     let newArr = [1];
 
-    for (let i = 0; newArr.length < n; i++) {
+    for (let i = 1; i < n; i++) {
+        let sum = 0;
+        for (let j = 0; j < (k, newArr.length); j--) {
+            console.log(j);
 
-        let sliced = newArr.slice(newArr.length, -k)
+            sum += newArr[i - 1];
+        }
+        newArr.push(sum)
     }
 
-
+    console.log(newArr.join(` `));
 
 }
 lastKNumbersSequence(6, 3)
