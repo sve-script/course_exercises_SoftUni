@@ -29,7 +29,7 @@ function gladiatorInventory(array) {
     function buy(arr, item) {
         let check = arr.includes(item);
         if (!check) {
-            return arr.push(item)
+            return arr.push(item);
         }
         return;
     }
@@ -48,7 +48,7 @@ function gladiatorInventory(array) {
             arr.splice(check, 1);
             arr.push(item);
         }
-        return arr
+        return arr;
     }
 
     function upgrade(arr, item) {
@@ -57,7 +57,7 @@ function gladiatorInventory(array) {
         if (check >= 0) {
             arr.splice(check + 1, 0, item.replace(`-`, `:`))
         }
-        return arr
+        return arr;
     }
     console.log(startingInventory.join(` `));
 }
