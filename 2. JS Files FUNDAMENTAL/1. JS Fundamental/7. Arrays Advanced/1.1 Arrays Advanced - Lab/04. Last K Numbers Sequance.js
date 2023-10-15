@@ -13,7 +13,6 @@ function lastKNumbersSequence(n, k) {
     }
 
     console.log(newArr.join(` `));
-
 }
 lastKNumbersSequence(6, 3)
 
