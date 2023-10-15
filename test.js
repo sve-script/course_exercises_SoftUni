@@ -44,3 +44,9 @@ function func(arr) {
 }
 
 func([1, 5, 1, 3, 4, 5, 1])
+
+
+
+let words = ['nest', 'Eggs', 'bite', 'Grip', 'jAw'];
+words.sort((a, b) => a.localeCompare(b));
+console.log(words);
