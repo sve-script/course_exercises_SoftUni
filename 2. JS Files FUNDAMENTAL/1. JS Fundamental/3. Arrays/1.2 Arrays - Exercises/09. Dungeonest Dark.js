@@ -39,7 +39,7 @@ function dungeonsDark(dungeonRooms) {
                 }
                 break;
             case "chest": startingCoins += Number(newArr[j + 1]);
-                console.log(`You found ${newArr[j + 1]} coins.`);
+                console.log(`You found ${newArr[j + 1]} bitcoins.`);
                 break;
 
             default: startingHealth -= Number(newArr[j + 1]);
@@ -58,7 +58,7 @@ function dungeonsDark(dungeonRooms) {
 
     if (!isDeath) {
         console.log(`You've made it!`)
-        console.log(`Coins: ${startingCoins}`)
+        console.log(`Bitcoins: ${startingCoins}`)
         console.log(`Health: ${startingHealth}`)
     }
 }
