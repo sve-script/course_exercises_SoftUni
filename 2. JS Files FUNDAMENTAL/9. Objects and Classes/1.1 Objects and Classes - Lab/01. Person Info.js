@@ -1,3 +1,4 @@
+// first Variation
 function personInfo(firstName, lastName, age) {
 
     let person = {};
@@ -10,6 +11,7 @@ function personInfo(firstName, lastName, age) {
 }
 personInfo("Peter", "Pan", "20")
 
+// second variation
 function personInfoTwo(firstName, lastName, age) {
 
     let person = {
@@ -22,6 +24,7 @@ function personInfoTwo(firstName, lastName, age) {
 }
 personInfoTwo("Peter", "Pan", "20")
 
+//third variation
 function personalInfoThree(firstName, lastName, age) {
 
     let person = {
