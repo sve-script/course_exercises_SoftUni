@@ -1,19 +1,30 @@
 function storeProvision(stock, orders) {
 
-    let stockAndOrders = stock.concat(orders);
-
     let products = {};
 
-    for (let i = 0, y = i + 1; i < stockAndOrders.length; i += 2, y += 2) {
-        let product = stockAndOrders[i];
-        let quantity = Number(stockAndOrders[y]);
+    for (let i = 0; i < stock.length; i += 2) {
+        let product = stock[i];
+        let quantity = Number(stock[i + 1]);
 
 
-        products[product] = product;
+        products[product] = quantity;
 
     }
-    console.log(products);
 
+    for (let j = 0; j < orders.length; j += 2) {
+        let orderProduct = orders[j];
+        let qty = Number(orders[j + 1]);
+
+        if (orderProduct in products) {
+            products[orderProduct] += qty;
+        } else {
+            products[orderProduct] = qty;
+        }
+    }
+
+    for (let key in products) {
+        console.log(`${key} -> ${products[key]}`);
+    }
 }
 storeProvision(
     ['Chips', '5', 'CocaCola', '9', 'Bananas', '14', 'Pasta', '4', 'Beer', '2'],
