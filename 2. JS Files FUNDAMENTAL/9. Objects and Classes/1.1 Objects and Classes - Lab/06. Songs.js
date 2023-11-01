@@ -1,13 +1,6 @@
 function songs(array) {
 
-    let songsName = array.shift();
 
-    while (array > 0) {
-        let fullCommand = array.shift().split("_");
-        let type = fullCommand[0];
-        let song = fullCommand[1];
-        let time = fullCommand[2];
-    }
 
 
 }
