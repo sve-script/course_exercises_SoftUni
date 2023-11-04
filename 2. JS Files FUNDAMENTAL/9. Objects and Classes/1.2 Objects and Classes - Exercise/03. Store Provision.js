@@ -1,4 +1,7 @@
 function storeProvision(stock, orders) {
+
+    let stockAndOrders = stock.concat(orders);
+
     let products = {};
 
     for (let i = 0; i < stock.length; i += 2) {

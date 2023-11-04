@@ -1,23 +1,21 @@
 function cats(array) {
 
-    while (array.length > 0) {
-
-        let fullCommand = array.shift().split(` `);
-        let name = fullCommand[0];
-        let age = fullCommand[1];
-
-        class Cat {
-
-            constructor(name, age) {
-                this.name = name
-                this.age = age
-            }
+    class Cat {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
         }
-        function meow() {
-            return "Meow"
+        meow() {
+            return `Meow`
         }
-        let obj = new Cat(name, age);
-        console.log(`${obj.name}, age ${obj.age} says ${meow()}`);
+    }
+
+    for (let key of array) {
+        let [name, age] = key.split(` `);
+
+        let catObj = new Cat(name, age)
+        console.log(`${catObj.name}, age ${catObj.age} says ${catObj.meow()}`);
     }
 }
-cats(['Mellow 2', 'Tom 5'])
+
+cats(['Candy 1', 'Poppy 3', 'Nyx 2'])

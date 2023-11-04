@@ -1,10 +1,11 @@
 function test() {
 
+    let key = 'sve ...'
+
     let person = {
-        name: "sve",
-        age: 32,
-        sayHello: () => console.log(`hi`)
+        [key]: '1-24'
     }
-    person.sayHello()
+
+    console.log(person);
 }
 test()
