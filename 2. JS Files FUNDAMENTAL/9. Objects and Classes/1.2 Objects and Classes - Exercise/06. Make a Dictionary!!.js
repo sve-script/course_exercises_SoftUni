@@ -1,10 +1,19 @@
 function makeADictionary(jsonArray) {
 
-
     let obj = {};
 
+    let json = jsonArray.map((item) => JSON.parse(item)).sort((a, b) => {
+        let keyOne = Object.keys(a)[0];
+        let keyTwo = Object.keys(b)[0];
 
-    let json = jsonArray.map((item) => JSON.parse(item));
+        if (keyOne < keyTwo) {
+            return -1;
+        } else if (keyOne > keyTwo) {
+            return 1;
+        } else {
+            return 0;
+        }
+    });
 
     for (let object of json) {
         for (let [key, value] of Object.entries(object)) {
@@ -15,65 +24,8 @@ function makeADictionary(jsonArray) {
 
 
     for (let key in obj) {
-        console.log(key, obj[key]);
+        console.log(`Term: ${key} => Definition: ${obj[key]}`);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // let objArray = [];
-
-    // for (let json of jsonArray) {
-
-    //     let parseValue = JSON.parse(json);
-    //     let entries = Object.entries(parseValue)
-    //     objArray.push(parseValue)
-    // }
-
-    // let obj = {};
-
-    // for (let object of objArray){
-
-    // }
-
-    // let sortedArray = objArray.sort((a, b) => {
-    //     let keyOne = Object.keys(a)[0];
-    //     let keyTwo = Object.keys(b)[0];
-
-    //     if (keyOne < keyTwo) {
-    //         return -1;
-    //     } else if (keyOne > keyTwo) {
-    //         return 1;
-    //     } else {
-    //         return 0;
-    //     }
-    // })
-
-
-
-    // for (let obj of sortedArray) {
-    //     for (let key in obj) {
-    //         console.log(`Term: ${key} => Definition: ${obj[key]}`);
-    //     }
-    // }
 
 }
 makeADictionary([
