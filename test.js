@@ -1,11 +1,14 @@
 function test() {
 
-    let key = 'sve ...'
+    let person = {};
 
-    let person = {
-        [key]: '1-24'
-    }
+    let sve = `name`
 
+    person[sve] = [1, 2, 3, 4];
+
+    console.log(person[sve]);
+
+    person[sve].push(...[1, 2, 3, 4])
     console.log(person);
 }
 test()
