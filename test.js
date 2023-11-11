@@ -1,14 +1,4 @@
-function test() {
-
-    let person = {};
-
-    let sve = `name`
-
-    person[sve] = [1, 2, 3, 4];
-
-    console.log(person[sve]);
-
-    person[sve].push(...[1, 2, 3, 4])
-    console.log(person);
+function myFunction(str) {
+    console.log(str.slice(- 3));
 }
-test()
+myFunction('abcdefg')

@@ -1,22 +1,21 @@
-function piccolo(input) {
+function piccolo(array) {
 
-    let parking = new Set();
+    let currentCars = new Set();
 
-    for (let line of input) {
-        let [direction, number] = line.split(", ");
-        if (direction !== 'OUT') {
-            parking.add(number);
+    for (let command of array) {
+        let [direction, number] = command.split(", ");
+        if (direction == 'IN') {
+            currentCars.add(number);
         } else {
-            parking.delete(number)
+            currentCars.delete(number)
         }
     }
 
-    if (parking.size == 0) {
+    if (currentCars.size == 0) {
         return "Parking Lot is Empty";
     }
 
-    let sortedParking = new Set([...parking].sort()).forEach(x => console.log(x))
-
+    let sortedParking = Array.from(currentCars).sort().map(x => console.log(x))
 }
 piccolo(['IN, CA2844AA',
     'IN, CA1234TA',
