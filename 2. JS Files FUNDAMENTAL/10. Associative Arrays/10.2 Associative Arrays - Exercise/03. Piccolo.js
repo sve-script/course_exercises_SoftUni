@@ -15,11 +15,8 @@ function piccolo(input) {
         return "Parking Lot is Empty";
     }
 
-    let sortedParking = new Set([...parking].sort())
+    let sortedParking = new Set([...parking].sort()).forEach(x => console.log(x))
 
-    for (let key of sortedParking) {
-        console.log(key);
-    }
 }
 piccolo(['IN, CA2844AA',
     'IN, CA1234TA',
