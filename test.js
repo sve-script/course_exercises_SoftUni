@@ -1,15 +1,22 @@
 function myFunction(obj, b) {
 
-    let person = {};
+    class Person {
+        constructor(age,name,city){
+            this.age = age;
+            this.name = name;
+            this.city = city
 
+        }
 
-    person.file = {};
+        myCity(){
+            console.log(`${this.city} is the best City in the word`);
+        }
+    }
 
+    let personOne = new Person(31,`sve`, `stara zagora`)
 
-    person.file.key = { 22: 1 };
+    
+    personOne.myCity()
 
-    person.file.key.element = 1;
-
-    console.log(person.file.key);
 }
 myFunction([1, 2, 3], [3, 2, 1])
