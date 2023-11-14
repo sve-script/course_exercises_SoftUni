@@ -1,15 +1,5 @@
-function
-    myFunction
-    (
-        a, b
-    ) {
-    let count = 0;
-    return b.forEach(x)=> {
-        if (x === b) {
-            count++
-        }
-    }
-    return count
-}
+function myFunction(obj, b) {
 
-myFunction('m', 'how many times does the character occur in this sentence?')
+    console.log(obj.b !== null && obj.b !== undefined);
+}
+myFunction({ x: 'a', b: 'b', z: undefined }, 'z')
