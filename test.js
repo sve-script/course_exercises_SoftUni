@@ -1,5 +1,15 @@
 function myFunction(obj, b) {
 
-    console.log(obj.b !== null && obj.b !== undefined);
+    let person = {};
+
+
+    person.file = {};
+
+
+    person.file.key = { 22: 1 };
+
+    person.file.key.element = 1;
+
+    console.log(person.file.key);
 }
-myFunction({ x: 'a', b: 'b', z: undefined }, 'z')
+myFunction([1, 2, 3], [3, 2, 1])
