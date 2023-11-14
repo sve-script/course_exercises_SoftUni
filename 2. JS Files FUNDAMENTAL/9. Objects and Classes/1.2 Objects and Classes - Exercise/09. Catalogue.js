@@ -1,30 +1,26 @@
-function catalogue(input){
+function catalogue(input) {
 
     let storage = {};
 
-    for (let el of input){
-        let [name,price] = el.split(` : `);
+    for (let el of input) {
+        let [name, price] = el.split(` : `);
 
         let firstNameLetter = name[0];
-        if (!storage.hasOwnProperty(firstNameLetter)){
+        if (!storage.hasOwnProperty(firstNameLetter)) {
             storage[firstNameLetter] = {};
-            storage[firstNameLetter][name] = Number(price);
-        }else {
-            storage[firstNameLetter][name] = Number(price)
         }
+        storage[firstNameLetter][name] = Number(price)
     }
 
     let entries = Object.entries(storage).sort();
 
-    for (let [symbol, object] of entries){
+    for (let [symbol, object] of entries) {
         console.log(symbol);
-        let objEntries = Object.entries(object).sort((a,b) => a[0].localeCompare(b[0]));
-        for (let [name, price] of objEntries){
+        let objEntries = Object.entries(object).sort((a, b) => a[0].localeCompare(b[0]));
+        for (let [name, price] of objEntries) {
             console.log(`  ${name}: ${price}`);
         }
-
     }
-
 }
 catalogue([
     'Appricot : 20.4',
@@ -35,5 +31,5 @@ catalogue([
     'Apple : 1.25',
     'Anti-Bug Spray : 15',
     'T-Shirt : 10'
-    ]
-    )
+]
+)
