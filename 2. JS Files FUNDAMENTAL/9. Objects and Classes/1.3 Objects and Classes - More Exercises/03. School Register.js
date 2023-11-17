@@ -4,33 +4,30 @@ function schoolRegister(array) {
 
     for (let el of array) {
         let student = el.split(`: `);
-        let name = student[1].split(`, `).shift();
-        let grade = student[2].split(`, `).shift();;
-        let avgGrade = Number(student[3].split(`, `).shift());
-        if (avgGrade >= 3) {
-            if (!students.hasOwnProperty(grade)) {
-                students[grade] = { [name]: avgGrade };
+
+        let studentName = student[1].split(`, `).shift();
+        let studentGrade = student[2].split(`, `).shift();;
+        let studentAvgGrade = Number(student[3].split(`, `).shift());
+
+        if (studentAvgGrade >= 3) {
+            if (!students.hasOwnProperty(studentGrade)) {
+                students[studentGrade] = [studentName, studentAvgGrade];
             } else {
-                students[grade][name] = avgGrade
+                students[studentGrade].push(studentName, studentAvgGrade)
             }
         }
     }
 
+    for (let key in students) {
 
-    let entries = Object.entries(students).sort((a, b) => Number(a[0]) - Number(b[0]));
+        let names = students[key].filter((x) => typeof x == `string`)
+        let grades = students[key].filter((x) => typeof x == `number`).reduce((accumulator, value) => accumulator + value);
 
-
-    console.log(entries);
-
-    for (let el of entries) {
-        let currentGrade = Number(el[0]);
-        let currentStudents = Object.entries(el)
-
-
-
+        console.log(`${Number(key) + 1} Grade`);
+        console.log(`List of students: ${names.join(`, `)}`);
+        console.log(`Average annual score from last year: ${(grades / (students[key].length / 2)).toFixed(2)}`);
+        console.log(``);
     }
-
-
 
 }
 schoolRegister([
@@ -47,5 +44,4 @@ schoolRegister([
     "Student name: Peter, Grade: 11, Graduated with an average score: 4.88",
     "Student name: Gavin, Grade: 10, Graduated with an average score: 4.00"
 ]
-
 )
