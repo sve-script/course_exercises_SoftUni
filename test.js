@@ -1,22 +1,11 @@
 function myFunction(obj, b) {
 
-    class Person {
-        constructor(age,name,city){
-            this.age = age;
-            this.name = name;
-            this.city = city
+    let totalPrice = 1;
 
-        }
 
-        myCity(){
-            console.log(`${this.city} is the best City in the word`);
-        }
+    if (totalPrice !== 0) {
+        console.log(`asd`);
     }
-
-    let personOne = new Person(31,`sve`, `stara zagora`)
-
-    
-    personOne.myCity()
 
 }
 myFunction([1, 2, 3], [3, 2, 1])
