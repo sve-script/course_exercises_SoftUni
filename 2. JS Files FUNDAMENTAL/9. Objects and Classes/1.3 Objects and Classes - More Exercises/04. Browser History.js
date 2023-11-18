@@ -4,16 +4,17 @@ function browserHistory(browserInfo, array) {
     for (let el of array) {
         let [command, site] = el.split(` `);
 
-        if (command !== `Clear`) {
+        if (command !== `Clear` && command == "Open") {
             browserInfo[`Browser Logs`].push(el)
         }
+
 
         switch (command) {
             case `Open`:
                 open(browserInfo, site)
                 continue;
             case `Close`:
-                close(browserInfo, site)
+                close(browserInfo, site, el)
                 break;
 
             case `Clear`:
@@ -38,13 +39,14 @@ function browserHistory(browserInfo, array) {
         return info[`Open Tabs`].push(site)
     }
 
-    function close(info, site) {
+    function close(info, site, el) {
 
         let openedSites = info[`Open Tabs`];
         let indx = openedSites.indexOf(site);
 
         if (indx !== -1) {
-            info[`Recently Closed`].push(site)
+            info[`Recently Closed`].push(site);
+            info[`Browser Logs`].push(el)
             return openedSites.splice(indx, 1)
         }
     }
@@ -61,10 +63,10 @@ function browserHistory(browserInfo, array) {
 }
 browserHistory({
     "Browser Name": "Google Chrome",
-    "Open Tabs": ["asd", "a", "Googlbe Translate"],
-    "Recently Closed": ["Yahoo", "Gmail"],
-    "Browser Logs": ["Open YouTube", "Open Yahoo", "Open Google Translate", "Close Yahoo", "Open Gmail", "Close Gmail", "Close Gmail", "Open Facebook"]
+    "Open Tabs": [],
+    "Recently Closed": [],
+    "Browser Logs": []
 },
-    ["Close Facebook", "Open StackOverFlow", "Open Google"]
+    ["Close Facebook", "Open StackOverFlow", "Open Google", "Clear History and Cache", "Open Google", "Close Facebook"]
 
 )
