@@ -6,9 +6,8 @@ function myFunction(obj, b) {
             plovdiv: 300,
             varna: 200,
             burgas: 100,
-        } 
-    Albania: Tirana,
-        Mexico: Mexico,
+        }
+
 
     }
 }
