@@ -24,3 +24,9 @@ function pascalCase(text) {
 
 }
 pascalCase('ThisIsSoAnnoyingToDo')
+
+
+function regex(text) {
+
+}
+regex('ThisIsSoAnnoyingToDo')
