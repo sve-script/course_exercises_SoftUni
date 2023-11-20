@@ -1,4 +1,3 @@
-function myFunction([arr]) {
-    console.log(arr);
-}
-myFunction([1, 2, 3, 3, 2, 1])
+const regex = /\w+/;
+console.log(regex.test("hello123")); // true
+console.log(regex.test("hello world")); // true
