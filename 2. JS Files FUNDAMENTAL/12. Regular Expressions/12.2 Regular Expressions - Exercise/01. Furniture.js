@@ -1,18 +1,17 @@
+// КОД С EXEC - КОЛКО ВЕРЕН НЕ ЗНАМ, НО РАБОТЕЩ 
+
 function furniture(arr) {
 
-    let indx = 0;
-
-    let el = arr[indx];
+    let command = arr.shift();
 
     let furnitures = [];
     let price = 0;
 
-    let pattern = />>(?<name>[A-Z][A-Za-z]+)<<(?<pricePerItem>\d+.+)!(?<quantity>\d+)/g;
+    let pattern = />>(?<name>[A-Z][A-Za-z]+)<<(?<pricePerItem>\d+\.?\d+)!(?<quantity>\d+)/g;
 
-    while (el !== `Purchase`) {
-        indx++
+    while (command !== `Purchase`) {
 
-        let match = pattern.exec(el)
+        let match = pattern.exec(command)
 
         while (match !== null) {
             let { name, pricePerItem, quantity } = match.groups;
@@ -24,10 +23,10 @@ function furniture(arr) {
 
             price += totalPrice;
 
-            match = pattern.exec(el)
+            match = pattern.exec(command)
         }
 
-        el = arr[indx]
+        command = arr.shift()
     }
 
     console.log(`Bought furniture:`);
@@ -36,6 +35,46 @@ function furniture(arr) {
 
 }
 furniture(['>>Laptop<<312.2323!3',
+    '>>TV<<300.21314!5',
+    '>Invalid<<!5',
+    '>>TV<<300.21314!20',
+    '>>Invalid<!5',
+    '>>TV<<30.21314!5',
+    '>>Invalid<<!!5',
+    'Purchase']
+)
+
+// Код с match
+function items(arr) {
+
+    let furniture = [];
+    let price = 0;
+
+    let command = arr.shift();
+
+    let pattern = />>(?<name>[A-Z][A-Za-z]+)<<(?<pricePerItem>\d+\.?\d+)!(?<quantity>\d+)/; // има ли g накрая кода гърми ??
+
+    while (command !== `Purchase`) {
+
+        let match = command.match(pattern);
+
+        if (match) {
+            let { name, pricePerItem, quantity } = match.groups;
+            furniture.push(name);
+
+            let totalPrice = Number(pricePerItem) * Number(quantity);
+            price += totalPrice
+        }
+
+        command = arr.shift()
+    }
+
+    console.log(`Bought furniture:`);
+    furniture.forEach(x => console.log(x));
+    console.log(`Total money spend: ${price.toFixed(2)}`);
+
+}
+items(['>>Laptop<<312.2323!3',
     '>>TV<<300.21314!5',
     '>Invalid<<!5',
     '>>TV<<300.21314!20',
