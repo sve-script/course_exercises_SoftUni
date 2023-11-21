@@ -74,12 +74,9 @@ function items(arr) {
     console.log(`Total money spend: ${price.toFixed(2)}`);
 
 }
-items(['>>Laptop<<312.2323!3',
-    '>>TV<<300.21314!5',
+items(['>Invalid<<!4',
+    '>Invalid<<!2',
     '>Invalid<<!5',
-    '>>TV<<300.21314!20',
-    '>>Invalid<!5',
-    '>>TV<<30.21314!5',
-    '>>Invalid<<!!5',
     'Purchase']
+
 )
