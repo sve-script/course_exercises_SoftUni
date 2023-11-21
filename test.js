@@ -1,3 +1,5 @@
-const regex = /\w+/;
-console.log(regex.test("hello123")); // true
-console.log(regex.test("hello world")); // true
+const inputString = "Mi*&^%$ch123o!#$%#nne787)";
+const regex = /Michonne|\d+/g;
+
+const matches = inputString.match(regex);
+console.log(matches);
