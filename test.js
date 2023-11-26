@@ -1,5 +1,13 @@
-const inputString = "Mi*&^%$ch123o!#$%#nne787)";
-const regex = /Michonne|\d+/g;
+let person = {
+    name: `sve`,
+    age: 32,
+    city: `Stara Zagora`
+}
 
-const matches = inputString.match(regex);
-console.log(matches);
+// for (let el of person) {
+//     console.log(el);
+// }
+console.log(`------------------------------------------------------`);
+for (let el1 in person) {
+    console.log(el1);
+}
