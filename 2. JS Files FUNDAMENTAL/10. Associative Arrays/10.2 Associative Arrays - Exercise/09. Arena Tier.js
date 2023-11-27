@@ -2,9 +2,7 @@ function arenaTier(input) {
 
     let command = input.shift();
 
-
     let gladiatorData = {};
-
 
     while (command !== "Ave Cesar") {
 
@@ -20,7 +18,7 @@ function arenaTier(input) {
 
                 } else {
                     if (gladiatorData[name][skill] < Number(power)) {
-                        gladiatorData[name][skill] = Number(power)
+                        gladiatorData[name][skill] = Number(power);
                     }
                 }
             }
@@ -55,7 +53,6 @@ function arenaTier(input) {
         command = input.shift();
     }
 
-
     let gladiatorTotalSkill = {}
 
     for (let key in gladiatorData) {
@@ -71,7 +68,6 @@ function arenaTier(input) {
 
     let entries = Object.entries(gladiatorTotalSkill).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 
-
     for (let [gladiator, power] of entries) {
         console.log(`${gladiator}: ${power} skill`);
 
@@ -79,18 +75,16 @@ function arenaTier(input) {
         for (let [technique, skill] of entriesFullDataInfo) {
             console.log(`- ${technique} <!> ${skill}`);
         }
-
     }
-
 
 }
 arenaTier([
-    'Peter -> BattleCry -> 400',
-    'Alex -> BattleCry -> 400',
-    'Stefan -> BattleCry -> 400',
-    'Peter vs Stefan',
-    'Alex vs Stefan',
-    'Stefan vs Ivan',
+    'Peter -> BattleCry -> 1000',
+    'Alex -> BattleCry -> 800',
+    'Stefan -> BattleCry -> 700',
+    'Alex vs Peter',
+    'Stefan vs Alex',
+    'tefan vs Ivan',
     'Ave Cesar'
 ]
 )
