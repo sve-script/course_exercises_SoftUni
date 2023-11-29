@@ -1,7 +1,8 @@
-let string = 'Hiware?uiy'
+let test1 = [1, 2, 3, 4, 5, 6]
+let test = "abcdef";
 
-let substring = "i";
-let replacement = "o"
 
-string = string.split(i).join(o)
-console.log(string);
+let newasd = test1.splice(1, 0, "ASD")
+
+console.log(newasd);
+console.log(test1);
