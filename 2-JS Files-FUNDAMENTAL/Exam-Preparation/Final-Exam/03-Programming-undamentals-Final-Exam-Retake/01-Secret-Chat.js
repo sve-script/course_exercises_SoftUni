@@ -16,7 +16,6 @@ function secretChat(input) {
             case "ChangeAll": changeAll(msg, indxOrSub, replace)
                 break;
         }
-        console.log(msg);
         command = input.shift();
     }
 
@@ -25,6 +24,7 @@ function secretChat(input) {
     function insertSpace(messages, index) {
 
         msg = messages.slice(0, Number(index)) + " " + messages.slice(Number(index));
+        console.log(msg);
         return msg;
 
     }
@@ -35,24 +35,36 @@ function secretChat(input) {
             messages = messages.replace(substring, "");
             let reverseMsg = substring.split(``).reverse().join(``);
             msg = messages + reverseMsg
-
+            console.log(msg);
             return msg;
 
         } else {
-            return console.log(`error`);
+            console.log(`error`);
         }
 
     }
     function changeAll(messages, substring, replace) {
 
-        msg = messages.split(substring).join(replace)
+        for (let i = 0; i < messages.length; i++) {
+
+            if (messages.includes(substring)) {
+                messages = messages.replace(substring, replace);
+            }
+        }
+
+        console.log(messages);
+        msg = messages;
+        return msg
     }
 }
 secretChat([
-    'heVVodar!gniV',
-    'ChangeAll:|:V:|:l',
-    'Reverse:|:!gnil',
-    'InsertSpace:|:5',
+    'Hiware?uiy',
+    'ChangeAll:|:i:|:o',
+    'Reverse:|:?uoy',
+    'Reverse:|:jd',
+    'InsertSpace:|:3',
+    'InsertSpace:|:7',
     'Reveal'
 ]
+
 )
