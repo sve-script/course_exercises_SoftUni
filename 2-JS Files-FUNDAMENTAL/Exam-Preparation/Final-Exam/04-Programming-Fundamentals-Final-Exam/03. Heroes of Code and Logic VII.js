@@ -8,6 +8,7 @@ function heroesOfCodeAndLogic(input) {
 
 
     while (token !== `End`) {
+        q
 
         if (token.includes(` - `)) {
 
@@ -32,8 +33,6 @@ function heroesOfCodeAndLogic(input) {
 
         token = input.shift();
     }
-
-
 
     function castSpell(heroName, mpNeed, spellName) {
 

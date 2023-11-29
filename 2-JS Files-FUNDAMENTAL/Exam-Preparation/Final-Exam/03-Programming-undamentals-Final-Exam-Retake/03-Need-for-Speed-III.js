@@ -4,7 +4,6 @@ function needForSpeed3(input) {
 
     let cars = {};
 
-
     for (let i = 0; i < numberOfCars; i++) {
 
         let [car, mileage, fuel] = input.shift().split(`|`);
@@ -68,7 +67,6 @@ function needForSpeed3(input) {
             console.log(`${vehicle} mileage decreased by ${km} kilometers`);
         }
     }
-
 
     for (let automobile in cars) {
         console.log(`${automobile} -> Mileage: ${cars[automobile]["miles"]} kms, Fuel in the tank: ${cars[automobile]["fuel"]} lt.`);
