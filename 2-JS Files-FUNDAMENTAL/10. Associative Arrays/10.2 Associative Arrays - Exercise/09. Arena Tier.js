@@ -42,8 +42,10 @@ function arenaTier(input) {
 
                         if (totalSkillGladOne > totalSkillGladTwo) {
                             delete gladiatorData[gladiatorTwo]
+                            break;
                         } else {
                             delete gladiatorData[gladiatorOne]
+                            break;
                         }
                     }
                 }

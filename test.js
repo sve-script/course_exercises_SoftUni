@@ -6,3 +6,6 @@ let newasd = test1.splice(1, 0, "ASD")
 
 console.log(newasd);
 console.log(test1);
+
+let newasdf = test.splice(1, 3)
+console.log(newasdf);
