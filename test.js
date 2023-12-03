@@ -1,11 +1,9 @@
-let test1 = [1, 2, 3, 4, 5, 6]
-let test = "abcdef";
+let a = "hello";
+
+let b = " word"
+
+a = a.slice(0, 2) + b + a.slice(2)
 
 
-let newasd = test1.splice(1, 0, "ASD")
 
-console.log(newasd);
-console.log(test1);
-
-let newasdf = test.splice(1, 3)
-console.log(newasdf);
+console.log(a);

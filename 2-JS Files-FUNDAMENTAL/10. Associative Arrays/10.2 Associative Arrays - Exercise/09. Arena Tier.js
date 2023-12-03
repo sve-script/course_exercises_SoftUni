@@ -55,6 +55,8 @@ function arenaTier(input) {
         command = input.shift();
     }
 
+
+
     let gladiatorTotalSkill = {}
 
     for (let key in gladiatorData) {
