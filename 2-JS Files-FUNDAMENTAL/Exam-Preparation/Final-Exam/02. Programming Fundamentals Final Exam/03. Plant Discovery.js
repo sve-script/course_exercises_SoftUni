@@ -17,7 +17,7 @@ function plantDiscovery(input) {
 
     while (command !== "Exhibition") {
 
-        let splitCommand = command.split(/[:-] /g);
+        let splitCommand = command.split(/[:-]* /g);
 
         if (plants.hasOwnProperty(splitCommand[1].replace(" ", ""))) {
 

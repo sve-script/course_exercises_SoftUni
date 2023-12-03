@@ -1,9 +1,10 @@
-let a = "hello";
-
-let b = " word"
-
-a = a.slice(0, 2) + b + a.slice(2)
+function test() {
 
 
+    a = 5;
+    c = ++a;
 
-console.log(a);
+    console.log(c);
+
+}
+test()
