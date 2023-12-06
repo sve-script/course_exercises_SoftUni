@@ -26,7 +26,7 @@ function heroRecruitment(input) {
 
 
     for (let key in heroes) {
-        console.log(`== ${key}: ${heroes[key].join(` `)}`);
+        console.log(`== ${key}: ${heroes[key].join(`, `)}`);
     }
 
 
