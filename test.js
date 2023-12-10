@@ -5,7 +5,7 @@ function test() {
     let b = a++
     let c = ++a;
 
-    console.log(c);
+    console.log(a);
 
 }
 test()
