@@ -23,8 +23,6 @@ function heroRecruitment(input) {
 
     console.log(`Heroes:`);
 
-
-
     for (let key in heroes) {
         console.log(`== ${key}: ${heroes[key].join(`, `)}`);
     }
@@ -80,7 +78,9 @@ heroRecruitment([
     "Learn Stefan ItShouldWork",
     "Learn Stefan ItShouldWork",
     "Learn Ivan asdasd",
-    "Unlearn Stefan ItShouldWork",
+    "Unlearn Stefan Alabala",
+    "Learn Stefan Alabala",
+    "Learn Stefan Alabalanica",
     "Unlearn Ivan ItShouldWork",
     "Unlearn Stefan nqmatakavamagiq",
 
