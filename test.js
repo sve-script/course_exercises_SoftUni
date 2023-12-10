@@ -1,10 +1,9 @@
 function test() {
 
 
-    a = 5;
-    c = ++a;
+    let a = 5 || 6
 
-    console.log(c);
+    console.log(a);
 
 }
 test()
