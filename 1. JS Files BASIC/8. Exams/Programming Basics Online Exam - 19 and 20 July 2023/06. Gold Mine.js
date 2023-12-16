@@ -4,7 +4,7 @@ function goldMine(input) {
     let location = Number(input[index]);
     index++
 
-    for (let i = index; i < input.length; i++) {
+    for (let i = index; i < input.length;) {
         let avgGoldPerDay = Number(input[i]);
         i++
         let days = Number(input[i]);
@@ -22,14 +22,15 @@ function goldMine(input) {
         } else {
             console.log(`You need ${((totalGoldNeeded - totalForThisMine) / days).toFixed(2)} gold.`);
         }
-        i--
     }
-
 }
-goldMine(["1",
-"5",
-"3",
-"10",
-"1",
-"3"])
-
+goldMine(["2", // location 
+    "10", // sreden dobiv na zlato
+    "3", // dni, koito shte se kopae
+    "10", // den 1
+    "10", // den 2 
+    "11", // den 3
+    "20", // sreden dobiv na zlato
+    "2", // dni koito shte se kopae
+    "20", // den 1 
+    "10"]) // den 2
