@@ -1,32 +1,45 @@
 function catFood(input) {
-    let countCats = Number(input[0]);
-    let hranaGram = 0;
 
-    let totalFood = 0;
-    let totalKg = 0;
+    let index = 0;
+    let locations = Number(input[index]);
+    index++
 
-    let cats1 = 0;
-    let cats2 = 0;
-    let cats3 = 0;
+    let avgGoldPerMine = Number(input[index]);
+    index++
+    let days = Number(input[index]);
+    index++
 
-    for (i = 1; i < countCats + 1; i++) {
-        hranaGram = Number(input[i]);
-        totalFood += hranaGram;
+    for (let i = index; i < input.length; i += days) {
 
-        if (hranaGram < 200) {
-            cats1++;
-        } else if (hranaGram < 300) {
-            cats2++;
-        } else if (hranaGram < 400) {
-            cats3++;
+        let totalGoldForThisMine = 0;
+
+        for (let j = days; j <= 2 + days; j++) {
+
+            totalGoldForThisMine += Number(input[j]);
         }
+
+        if (totalGoldForThisMine >= avgGoldPerMine) {
+            console.log(`Good job! Average gold per day: ${(totalGoldForThisMine / days).toFixed(2)}.`);
+        } else {
+            console.log(`You need ${(((avgGoldPerMine * days) - totalGoldForThisMine) / days).toFixed(2)} gold.`);
+        }
+        avgGoldPerMine = Number(input[i + days]);
+        i++
+        days = Number(input[i + days]);
+        i++
+
     }
 
-    totalKg = totalFood / 1000;
 
-    console.log(`Group 1: ${cats1} cats.`);
-    console.log(`Group 2: ${cats2} cats.`);
-    console.log(`Group 3: ${cats3} cats.`);
-    console.log(`Price for food per day: ${(totalKg * 12.45).toFixed(2)} lv.`);
+
 }
-catFood(["6", "102", "236", "123", "399", "342", "222"]);
+catFood(["2", // location 
+    "10", // sreden dobiv na zlato
+    "3", // dni, koito shte se kopae
+    "10", // den 1
+    "10", // den 2 
+    "11", // den 3
+    "20", // sreden dobiv na zlato
+    "2", // dni koito shte se kopae
+    "20", // den 1 
+    "10"]) // den 2
