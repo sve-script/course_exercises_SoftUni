@@ -16,7 +16,7 @@ function equalNeighbors(matrix) {
             }
         }
     }
-    console.log(neighbors);
+    return neighbors
 }
 
 equalNeighbors([['test', 'yo', 'yo', 'ho'],
