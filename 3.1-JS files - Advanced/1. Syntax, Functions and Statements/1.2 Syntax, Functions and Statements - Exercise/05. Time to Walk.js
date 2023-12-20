@@ -1,0 +1,7 @@
+function timeToWalk(params) {
+
+
+
+
+
+}
