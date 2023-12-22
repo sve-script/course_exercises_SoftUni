@@ -1,0 +1,4 @@
+function evenPositionElements(params) {
+
+}
+evenPositionElements()
