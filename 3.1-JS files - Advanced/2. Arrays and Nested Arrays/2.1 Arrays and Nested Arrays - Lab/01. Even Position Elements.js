@@ -1,4 +1,0 @@
-function evenPositionElements(params) {
-
-}
-evenPositionElements()
