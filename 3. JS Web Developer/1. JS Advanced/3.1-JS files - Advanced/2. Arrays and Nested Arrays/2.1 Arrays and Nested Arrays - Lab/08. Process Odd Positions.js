@@ -14,6 +14,8 @@
 
 function proccessOddPositions(params) {
 
+    // i във филтър е index. Филтър може да приема, елемента (х), и индекс (i). В случаят сме филтрирали по индекса да е нечетен.
+
     const result = params.filter((x, i) => i % 2 == 1).map(x => x * 2).reverse().join(` `);
     return result;
 }
