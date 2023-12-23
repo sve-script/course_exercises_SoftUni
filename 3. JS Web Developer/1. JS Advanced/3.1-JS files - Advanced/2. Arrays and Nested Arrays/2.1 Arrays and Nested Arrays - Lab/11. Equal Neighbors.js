@@ -20,16 +20,16 @@ function EqualNeighbors(params) {
                     pairs++
                 }
             }
-
         }
     }
 
     return pairs;
 }
 
-EqualNeighbors([['test', 'yes', 'yo', 'ho'],
-['well', 'done', 'yo', '6'],
-['not', 'done', 'yet', '5']]
+EqualNeighbors([
+    ['test', 'yes', '6', 'ho'],
+    ['well', 'done', 'yo', '5'],
+    ['not', 'yet', 'not', '5']]
 
 
 )
