@@ -1,4 +1,4 @@
-const printAnArrayWithAGivenDelimiter = (array, symbol) => {
+function printAnArrayWithAGivenDelimiter(array, symbol) {
 
     console.log(array.join(symbol));
 }
