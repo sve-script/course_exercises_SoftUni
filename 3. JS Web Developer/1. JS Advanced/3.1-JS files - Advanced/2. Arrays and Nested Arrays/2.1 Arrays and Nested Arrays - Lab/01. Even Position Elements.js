@@ -18,8 +18,8 @@ evenPositionElements(['20', '30', '40', '50', '60'])
 function evenPositionElementsV1(arr) {
 
 
-    console.log(arr.filter((el, i) => i % 2).join(" "));
+    console.log(arr.filter((el, i) => i % 2 == 0).join(" "));
 
 
 }
-evenPositionElementsV1([10, 20, 30, 40, 50, 60])
+evenPositionElementsV1([20, 30, 40, 50, 60])
