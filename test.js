@@ -1,11 +1,7 @@
 function test() {
 
 
-    let a = 5;
-    let b = a++
-    let c = ++a;
-
-    console.log(a);
+    console.log(0.1 + 0.2);
 
 }
 test()
